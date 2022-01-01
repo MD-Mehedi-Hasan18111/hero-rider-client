@@ -1,6 +1,6 @@
 import axios from "axios";
 import React from "react";
-import { Col, Container, Row, Spinner } from "react-bootstrap";
+import { Alert, Col, Container, Row, Spinner } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useLocation, useNavigate } from "react-router-dom";
 import swal from "sweetalert";
@@ -9,7 +9,7 @@ import Navigation from "../../Shared/Navigation/Navigation";
 import "./RegisterLearner.css";
 
 const RegisterLearner = () => {
-  const { Register, user, userProfileInfo, isLoading } = useAuth();
+  const { Register, user, userProfileInfo, isLoading, authError } = useAuth();
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -63,7 +63,8 @@ const RegisterLearner = () => {
               <span style={{ color: "#c0392b", fontStyle: "italic" }}>
                 Driveing Learner
               </span>
-            </h2>
+              </h2>
+              {authError && <Alert variant="danger">{authError}</Alert>}
             <form className="mt-3" onSubmit={handleSubmit(onSubmit)}>
               <Row>
                 <Col lg={6} md={6} xs={12}>

@@ -100,6 +100,7 @@ const useFirebase = () => {
   return {
     user,
     userProfileInfo,
+    authError,
     Register,
     isLoading,
     signInUser,

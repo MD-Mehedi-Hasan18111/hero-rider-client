@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./RegisterRider.css";
-import { Col, Container, Row, Spinner } from "react-bootstrap";
+import { Alert, Col, Container, Row, Spinner } from "react-bootstrap";
 import Navigation from "../../Shared/Navigation/Navigation";
 import { useLocation, useNavigate } from "react-router-dom";
 import swal from "sweetalert";
@@ -9,7 +9,7 @@ import axios from "axios";
 import useAuth from "../../hooks/useAuth";
 
 const RegisterRider = () => {
-  const { Register, user, userProfileInfo, isLoading } = useAuth();
+  const { Register, user, userProfileInfo, isLoading, authError } = useAuth();
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -66,7 +66,8 @@ const RegisterRider = () => {
               <span style={{ color: "#c0392b", fontStyle: "italic" }}>
                 Rider
               </span>
-            </h2>
+              </h2>
+              {authError && <Alert variant="danger">{authError}</Alert>}
             <form className="mt-3" onSubmit={handleSubmit(onSubmit)}>
               <Row>
                 <Col lg={6} md={6} xs={12}>

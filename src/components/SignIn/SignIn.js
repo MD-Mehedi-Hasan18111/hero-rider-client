@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import './SignIn.css';
-import { Container, Spinner } from "react-bootstrap";
+import { Alert, Container, Spinner } from "react-bootstrap";
 import Navigation from "../../Shared/Navigation/Navigation";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
@@ -8,7 +8,7 @@ import useAuth from "../../hooks/useAuth";
 const SignIn = () => {
 
   const [userInfo, setUserInfo] = useState({});
-  const { signInUser, isLoading } = useAuth();
+  const { signInUser, isLoading, authError } = useAuth();
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -35,6 +35,7 @@ const SignIn = () => {
           <span style={{ color: "#c0392b", fontStyle: "italic" }}>User</span>
         </h2>
         <div className="form-area">
+        {authError && <Alert variant="danger">{authError}</Alert>}
           <form onSubmit={handleSubmit}>
             <input
               className="form-control"

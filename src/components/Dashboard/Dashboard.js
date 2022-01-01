@@ -119,28 +119,28 @@ const Dashboard = () => {
           {users?.map((data) => (
             <tr>
               <td>
-                <p>{data.name}</p>
+                <p>{data?.name}</p>
               </td>
               <td>
-                <p>{data.age}</p>
+                <p>{data?.age}</p>
               </td>
               <td>
-                <p>{data.email}</p>
+                <p>{data?.email}</p>
               </td>
               <td>
-                <p>{data.phone}</p>
+                <p>{data?.phone}</p>
               </td>
               <td>
-                <p>{data.address}</p>
+                <p>{data?.address}</p>
               </td>
               <td>
-                <p>{data.vehicleType}</p>
+                <p>{data?.vehicleType}</p>
               </td>
               <td>
                 {data?.licenceImage ? (
                   <img
                     style={{ height: "80px" }}
-                    src={`data:image/png;base64,${data.licenceImage}`}
+                    src={`data:image/png;base64,${data?.licenceImage}`}
                     alt=""
                   />
                 ) : (
@@ -150,13 +150,13 @@ const Dashboard = () => {
               <td>
                 <img
                   style={{ height: "80px" }}
-                  src={`data:image/png;base64,${data.nidImage}`}
+                  src={`data:image/png;base64,${data?.nidImage}`}
                   alt=""
                 />
               </td>
               <td>{data?.payment ? <p>{data.payment?.packageName}</p> : <p>N/A</p>}</td>
               <td>
-                <p>{data.role}</p>
+                <p>{data?.role}</p>
               </td>
             </tr>
           ))}
