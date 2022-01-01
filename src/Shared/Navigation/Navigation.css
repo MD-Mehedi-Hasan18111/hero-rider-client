@@ -1,0 +1,12 @@
+.navigation{
+    box-shadow: 0 10px 10px gray;
+}
+
+.signInBtn{
+    border: 0;
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 5px 15px;
+    font-size: 15px;
+    border-radius: 5px;
+}

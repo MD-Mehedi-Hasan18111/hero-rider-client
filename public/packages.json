@@ -1,0 +1,6 @@
+[
+    { "id": 1, "packageName": "Car Driving Lesson", "price": 200, "icon": "fas fa-car"},
+        { "id": 2, "packageName": "Bike Ride Lesson", "price": 100, "icon": "fas fa-motorcycle"},
+        { "id": 3, "packageName": "Cycle Ride Lesson", "price": 50, "icon": "fas fa-bicycle" 
+        }
+]

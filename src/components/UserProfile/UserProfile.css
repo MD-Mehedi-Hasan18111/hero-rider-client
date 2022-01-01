@@ -1,0 +1,19 @@
+.profile-header{
+    text-align: center;
+    margin: 20px 0;
+}
+.profile-header img{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+}
+
+.user-details tr{
+    border: none !important;
+}
+
+@media only screen and (max-width: 600px) {
+    td img{
+        width: 100%;
+    }
+}

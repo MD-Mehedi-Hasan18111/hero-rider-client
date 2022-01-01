@@ -1,0 +1,32 @@
+.users-head tr{
+    text-align: center;
+    vertical-align: middle;
+}
+.users-list tr{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.pagination{
+    width: 800px;
+    margin: 0 auto;
+}
+
+.pagination button{
+    border: 0;
+    background-color: #E74C3C;
+    color: #fff;
+    margin-right: 10px;
+    padding: 3px 20px;
+}
+
+.pagination .selected{
+    background-color: #000;
+    color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+    .users-list img{
+        width: 100%;
+    }
+}
