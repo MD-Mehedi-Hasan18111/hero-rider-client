@@ -37,7 +37,7 @@ const RegisterLearner = () => {
 
     if (data.password1 === data.password2) {
       Register(data.name, data.email, data.password1, navigate, location);
-      axios.post("http://localhost:5000/addLearner", formData).then((res) => {
+      axios.post("https://hidden-citadel-26432.herokuapp.com/addLearner", formData).then((res) => {
         if (res.data.insertedId) {
           swal("Registration Successfully!", "", "success");
           e.target.reset();

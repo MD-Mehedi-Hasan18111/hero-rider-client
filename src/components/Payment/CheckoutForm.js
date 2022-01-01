@@ -13,7 +13,7 @@ const CheckoutForm = ({paymentObj}) => {
     const elements = useElements();
 
     useEffect(() => {
-        fetch("http://localhost:5000/create-payment-intent", {
+        fetch("https://hidden-citadel-26432.herokuapp.com/create-payment-intent", {
           method: "POST",
           headers: {
             "content-type": "application/json",
@@ -72,7 +72,7 @@ const CheckoutForm = ({paymentObj}) => {
             last4: paymentMethod.card.last4
           }
     
-          fetch(`http://localhost:5000/payments/${id}`, {
+          fetch(`https://hidden-citadel-26432.herokuapp.com/payments/${id}`, {
             method: 'PUT',
             headers: {
               'content-type': 'application/json'

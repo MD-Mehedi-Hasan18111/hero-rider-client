@@ -20,7 +20,7 @@ const useFirebase = () => {
 
   // get the user profile information
   useEffect(() => {
-    fetch(`http://localhost:5000/userProfile/${user.email}`)
+    fetch(`https://hidden-citadel-26432.herokuapp.com/userProfile/${user.email}`)
       .then((res) => res.json())
       .then((data) => setUserProfileInfo(data));
   }, [userProfileInfo, user.email]);

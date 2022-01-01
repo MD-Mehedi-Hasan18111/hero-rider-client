@@ -12,7 +12,7 @@ const Dashboard = () => {
   const size = 11;
 
   useEffect(() => {
-    fetch(`http://localhost:5000/users?page=${page}&&size=${size}`)
+    fetch(`https://hidden-citadel-26432.herokuapp.com/users?page=${page}&&size=${size}`)
       .then((res) => res.json())
       .then((data) => {
         setAllUser(data.users);
